@@ -3,7 +3,6 @@
  * @return {boolean}
  */
 var winnerOfGame = function(colors) {
-  const n = colors.length;
   let Awin = 0, Bwin = 0;
 
   const checkColor = (i, text) => {
@@ -14,8 +13,7 @@ var winnerOfGame = function(colors) {
     return c1 === text && c2 === text && c3 === text
   }
  
-  for (let i = 0; i < n - 2; i++) {
-    console.log(checkColor(i, "A"))
+  for (let i = 0; i < colors.length - 2; i++) {
     if (checkColor(i, "A")) Awin++
     else if (checkColor(i, "B")) Bwin++
   }
