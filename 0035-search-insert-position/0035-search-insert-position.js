@@ -4,15 +4,15 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
-    let count = 0
+    let index = 0
     for(let i = 0; i < nums.length; i++) {
         if(nums[i] === target) {
-            count = i
+            index = i
             break
         } else if(target > nums[i]) {
-            count = i + 1
+            index = i + 1
         }
     }
 
-    return count
+    return index
 };
