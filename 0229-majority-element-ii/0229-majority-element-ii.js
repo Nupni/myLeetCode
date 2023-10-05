@@ -16,7 +16,7 @@ var majorityElement = function(nums) {
     }
 
      for(let key in memo) {
-        if(memo[key] > (nums.length) / 3) {
+        if(memo[key] > nums.length / 3) {
             result.push(key) 
         }
     }
