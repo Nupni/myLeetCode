@@ -5,17 +5,18 @@
  * @return {boolean}
  */
 var isCovered = function(ranges, left, right) {
-    
-    for(let i = left; i <= right; i++) {
-        let flag = true
-        for(let j = 0; j < ranges.length; j++) {
-            if(ranges[j][0] <= i && ranges[j][1] >= i) {
-                flag = false
-                break
+    for(let i = left; i <= right; i++){
+        let check = false;
+        for(let j = 0; j < ranges.length; j++){
+            let first=ranges[j][0];
+            let second=ranges[j][1];
+
+            if(first<=i && i<=second){
+                check=true;
+                break;
             }
         }
-        if(flag) return false
+        if(!check) return false;
     }
-
-    return true
+    return true;
 };
