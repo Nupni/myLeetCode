@@ -1,5 +1,0 @@
-*.js linguist-vendored=true
-*.ts linguist-vendored=true
-*.cs linguist-vendored=true
-*.ora linguist-vendored=true
-*.sql linguist-vendored=true
